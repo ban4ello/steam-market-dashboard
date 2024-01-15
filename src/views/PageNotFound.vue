@@ -9,16 +9,14 @@ import LayoutGuest from '@/layouts/LayoutGuest.vue'
 <template>
   <LayoutGuest>
     <SectionFullScreen v-slot="{ cardClass }" bg="pinkRed">
-      <CardBox :class="cardClass">
+      <CardBox :class="cardClass" class="flex items-center">
         <div class="space-y-3">
-          <h1 class="text-2xl">Unhandled exception</h1>
-
-          <p>An Error Occurred</p>
+          <h1 class="text-2xl">Page Not Found</h1>
         </div>
 
         <template #footer>
           <BaseButtons>
-            <BaseButton label="Done" to="/" color="danger" />
+            <BaseButton label="Go Home page" to="/" color="success" />
           </BaseButtons>
         </template>
       </CardBox>

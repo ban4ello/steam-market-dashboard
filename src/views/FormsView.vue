@@ -59,7 +59,7 @@ const formStatusSubmit = () => {
     <SectionMain>
       <SectionTitleLineWithButton :icon="mdiBallotOutline" title="Forms example" main>
         <BaseButton
-          href="https://github.com/justboil/admin-one-vue-tailwind"
+          href="https://github.com/ban4ello/steam-market-dashboard.git"
           target="_blank"
           :icon="mdiGithub"
           label="Star on GitHub"

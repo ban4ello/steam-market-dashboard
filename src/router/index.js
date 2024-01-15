@@ -1,23 +1,12 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Style from '@/views/StyleView.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/HomeView.vue'
 
 const routes = [
   {
     meta: {
-      title: 'Select style'
-    },
-    path: '/',
-    name: 'style',
-    component: Style
-  },
-  {
-    // Document title tag
-    // We combine it with defaultDocumentTitle set in `src/main.js` on router.afterEach hook
-    meta: {
       title: 'Dashboard'
     },
-    path: '/dashboard',
+    path: '/',
     name: 'dashboard',
     component: Home
   },
@@ -55,14 +44,6 @@ const routes = [
   },
   {
     meta: {
-      title: 'Responsive layout'
-    },
-    path: '/responsive',
-    name: 'responsive',
-    component: () => import('@/views/ResponsiveView.vue')
-  },
-  {
-    meta: {
       title: 'Login'
     },
     path: '/login',
@@ -76,11 +57,19 @@ const routes = [
     path: '/error',
     name: 'error',
     component: () => import('@/views/ErrorView.vue')
+  },
+  {
+    meta: {
+      title: 'Page Not Found'
+    },
+    path: '/:pathMatch(.*)*',
+    name: 'notFound',
+    component: () => import('@/views/PageNotFound.vue')
   }
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return savedPosition || { top: 0 }

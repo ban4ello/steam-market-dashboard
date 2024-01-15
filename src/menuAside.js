@@ -15,7 +15,7 @@ import {
 
 export default [
   {
-    to: '/dashboard',
+    to: '/',
     icon: mdiMonitor,
     label: 'Dashboard'
   },
@@ -33,16 +33,6 @@ export default [
     to: '/ui',
     label: 'UI',
     icon: mdiTelevisionGuide
-  },
-  {
-    to: '/responsive',
-    label: 'Responsive',
-    icon: mdiResponsive
-  },
-  {
-    to: '/',
-    label: 'Styles',
-    icon: mdiPalette
   },
   {
     to: '/profile',
@@ -72,15 +62,9 @@ export default [
     ]
   },
   {
-    href: 'https://github.com/justboil/admin-one-vue-tailwind',
+    href: 'https://github.com/ban4ello/steam-market-dashboard.git',
     label: 'GitHub',
     icon: mdiGithub,
     target: '_blank'
   },
-  {
-    href: 'https://github.com/justboil/admin-one-react-tailwind',
-    label: 'React version',
-    icon: mdiReact,
-    target: '_blank'
-  }
 ]
